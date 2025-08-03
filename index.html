@@ -10,6 +10,206 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Custom typography for professional resume website */
+			body {
+				font-size: 16px !important;
+				line-height: 1.6 !important;
+				background-color: #f5f5f5 !important;
+				font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+			}
+			
+			/* Main wrapper background */
+			#wrapper {
+				background-color: #f5f5f5 !important;
+			}
+			
+			/* Main content area with white background for content sections */
+			#main .inner {
+				background-color: #ffffff !important;
+				padding: 40px !important;
+				border-radius: 8px !important;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+				margin: 20px !important;
+			}
+			
+			/* All headings use consistent font family */
+			h1, h2, h3, h4, h5, h6 {
+				font-family: "Roboto Slab", serif !important;
+				font-weight: 600 !important;
+				letter-spacing: -0.3px !important;
+			}
+			
+			h1 {
+				font-size: 2.5em !important;
+				letter-spacing: -0.5px !important;
+			}
+			
+			h2 {
+				font-size: 2em !important;
+			}
+			
+			h3 {
+				font-size: 1.4em !important;
+				line-height: 1.3 !important;
+				margin-bottom: 0.8em !important;
+			}
+			
+			h4 {
+				font-size: 1.25em !important;
+				font-weight: 500 !important;
+				margin-bottom: 0.5em !important;
+			}
+			
+			/* All text elements use consistent typography */
+			p, li, span, a {
+				font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+				font-size: 1.05em !important;
+				line-height: 1.7 !important;
+				margin-bottom: 1.2em !important;
+			}
+			
+			.banner p {
+				font-size: 1.1em !important;
+				line-height: 1.8 !important;
+			}
+			
+			/* Code and monospace elements */
+			code, pre, .tools-used strong {
+				font-family: "Courier New", Courier, monospace !important;
+				font-weight: 600;
+				text-transform: uppercase;
+				font-size: 0.9em;
+				letter-spacing: 0.5px;
+			}
+			
+			/* Custom styles for Tools used section */
+			.tools-used {
+				font-size: 1em !important;
+				line-height: 1.5 !important;
+				transition: all 0.3s ease;
+			}
+			
+			.tools-used:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+			}
+			
+			/* Project card hover effect */
+			.project-container article {
+				transition: all 0.3s ease;
+			}
+			
+			.project-container article:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+				border-color: #007acc;
+			}
+			
+			/* Professional button styling */
+			.button {
+				font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+				font-size: 1.05em !important;
+				font-weight: 500 !important;
+				letter-spacing: 0.3px !important;
+			}
+			
+			/* Contact information styling */
+			.contact li {
+				font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+				font-size: 1.05em !important;
+				border-bottom: none !important;
+			}
+			
+			.contact li a {
+				font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+				border-bottom: none !important;
+				text-decoration: none !important;
+			}
+			
+			/* Navigation styling */
+			header nav ul {
+				font-family: "Roboto Slab", serif !important;
+				font-size: 0.95em !important;
+				font-weight: 600 !important;
+			}
+			
+			header nav ul li a {
+				font-family: "Roboto Slab", serif !important;
+				font-weight: 600 !important;
+			}
+			
+			/* Logo styling */
+			.logo {
+				font-family: "Roboto Slab", serif !important;
+				font-weight: 600 !important;
+			}
+			
+			/* Responsive grid for projects */
+			@media (max-width: 768px) {
+				.project-container article {
+					flex-direction: column !important;
+					text-align: center;
+				}
+				
+				.project-container article img {
+					width: 100% !important;
+					max-width: 400px;
+					height: auto !important;
+					margin: 0 auto 20px auto;
+				}
+				
+				.project-container article .content {
+					padding-left: 0 !important;
+				}
+				
+				body {
+					font-size: 15px !important;
+				}
+				
+				h1 {
+					font-size: 2.2em !important;
+				}
+				
+				h2 {
+					font-size: 1.8em !important;
+				}
+				
+				/* Hide navigation text on tablets */
+				header nav ul {
+					display: none !important;
+				}
+			}
+			
+			@media (max-width: 480px) {
+				#banner {
+					flex-direction: column !important;
+					text-align: center;
+				}
+				
+				#banner .image {
+					margin-bottom: 20px;
+				}
+				
+				body {
+					font-size: 14px !important;
+				}
+				
+				h1 {
+					font-size: 2em !important;
+				}
+				
+				h2 {
+					font-size: 1.6em !important;
+				}
+				
+				/* Stack header elements on mobile */
+				header {
+					flex-direction: column !important;
+					gap: 10px !important;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -23,147 +223,149 @@
 							<!-- Header -->
 								<header id="header">
 									<a href="index.html" class="logo"><strong>Yulin He</strong> | Project Portfolio</a>
-									<ul class="icons">
-										<li><a href="https://github.com/YULINHEEE?tab=repositories" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-										<li><a href="https://www.linkedin.com/in/yulinhe1008/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-										<li><a href="mailto:yulinhe1008@hotmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-									</ul>
+									<nav style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
+										<ul style="display: flex; gap: 15px; margin: 0; padding: 0; list-style: none; align-items: center; white-space: nowrap; flex-shrink: 0; font-weight: 600;">
+											<li><a href="#banner" style="text-decoration: none; color: #333; font-weight: 600; padding: 8px 15px; border-radius: 4px; transition: all 0.3s ease; border-bottom: none !important; white-space: nowrap;" onmouseover="this.style.backgroundColor='#f0f0f0'" onmouseout="this.style.backgroundColor='transparent'">About Me</a></li>
+											<li><a href="#projects" style="text-decoration: none; color: #333; font-weight: 600; padding: 8px 15px; border-radius: 4px; transition: all 0.3s ease; border-bottom: none !important; white-space: nowrap;" onmouseover="this.style.backgroundColor='#f0f0f0'" onmouseout="this.style.backgroundColor='transparent'">Projects</a></li>
+											<li><a href="#resume" style="text-decoration: none; color: #333; font-weight: 600; padding: 8px 15px; border-radius: 4px; transition: all 0.3s ease; border-bottom: none !important; white-space: nowrap;" onmouseover="this.style.backgroundColor='#f0f0f0'" onmouseout="this.style.backgroundColor='transparent'">Resume</a></li>
+											<li><a href="#contact" style="text-decoration: none; color: #333; font-weight: 600; padding: 8px 15px; border-radius: 4px; transition: all 0.3s ease; border-bottom: none !important; white-space: nowrap;" onmouseover="this.style.backgroundColor='#f0f0f0'" onmouseout="this.style.backgroundColor='transparent'">Contact Me</a></li>
+										</ul>
+										<ul class="icons" style="margin: 0; display: flex; gap: 10px; align-items: center; flex-shrink: 0;">
+											<li><a href="https://github.com/YULINHEEE" class="icon brands fa-github" target="_blank" style="font-size: 1.2em; padding: 8px;"><span class="label">GitHub</span></a></li>
+											<li><a href="https://public.tableau.com/app/profile/yulin.he/viz/SupplyChian/DashboardSales" class="icon solid fa-chart-bar" target="_blank" style="font-size: 1.2em; padding: 8px;"><span class="label">Tableau Public</span></a></li>
+											<li><a href="https://www.linkedin.com/in/yulinhe1008/" class="icon brands fa-linkedin" target="_blank" style="font-size: 1.2em; padding: 8px;"><span class="label">LinkedIn</span></a></li>
+											<li><a href="https://www.instagram.com/yulinheee/" class="icon brands fa-instagram" target="_blank" style="font-size: 1.2em; padding: 8px;"><span class="label">Instagram</span></a></li>
+											<li><a href="mailto:yulinhe1008@hotmail.com" class="icon solid fa-envelope" style="font-size: 1.2em; padding: 8px;"><span class="label">Email</span></a></li>
+										</ul>
+									</nav>
 								</header>
 
 							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
+								<section id="banner" style="display: flex; align-items: center; gap: 30px;">
+									<div class="content" style="flex: 2;">
 										<header>
 											<h1>Hello, I'm Yulin He</h1>
 											<p>Welcome to my project portfolio website</p>
 										</header>
-										<p>I am passionate about programming, automation, and data analysis. Here you can find a selection of my personal and professional projects. Click any project to view my code repositories on GitHub!</p>
-										<ul class="actions">
-											<li><a href="#projects" class="button big">View Projects</a></li>
-										</ul>
+										<p>I'm a data analyst with practical experience in Python, R, SQL, Tableau, and Power BI. I specialize in turning raw data into clear insights that support business decisions.
+											<br />My projects cover sales performance tracking, supply chain analysis, time series forecasting, and text analysis with NLP.
+											<br />With a focus on data storytelling and problem-solving, I enjoy helping organizations understand patterns, improve operations, and make informed decisions through data.</p>
 									</div>
-									<span class="image object">
-										<img src="images/pic10.jpg" alt="" />
+									<span class="image object" style="display: flex; justify-content: flex-end; flex: 1;">
+										<img src="images/pic10.jpg" alt="" style="width: 300px; height: 300px; object-fit: cover; border-radius: 50%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);" />
 									</span>
 								</section>
 
 							<!-- Projects Section -->
 								<section id="projects">
-									<header class="major">
+									<header class="major" onclick="toggleProjectsContent()" style="cursor: pointer;">
 										<h2>My Projects</h2>
 									</header>
-									<div class="features">
-										<article onclick="window.open('https://github.com/YULINHEEE/NLP-text-preprocessing-and-classification/blob/Test/text_classification.ipynb','_blank')" style="cursor:pointer; display: flex; flex-direction: column; align-items: center;">
-											<img src="images/pic01.jpg" alt="Project Image" style="width:100%;height:auto;" />
-											<div class="content" style="width:100%;">
-												<h3>NLP text preprocessing and classification</h3>
-												<p>Automated scripts for laboratory supply management using Selenium, improving efficiency and reducing manual work.</p>
+									<div id="projects-content" class="project-container" style="display: flex; flex-direction: column; gap: 30px;">
+										<article onclick="window.open('https://public.tableau.com/app/profile/yulin.he/viz/SupplyChian/DashboardSales?publish=yes','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 25px; border: 1px solid #ddd; border-radius: 10px; height: fit-content; gap: 30px; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+											<img src="images/tableau.png" alt="Project Image" style="width: 350px; height: 220px; object-fit: contain; border-radius: 8px; background-color: #f8f9fa; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+											<div class="content" style="flex: 1; padding-left: 10px;">
+												<h3 style="margin-bottom: 15px; color: #333; font-size: 1.5em;">Sales KPI Dashboard with Tableau</h3>
+												<div class="tools-used" style="margin-bottom: 20px; padding: 12px 16px; background-color: #f8f9fa; border-radius: 6px; border-left: 4px solid #007acc;">
+													<div style="margin-bottom: 8px;"><strong style="color: #007acc;">Tools:</strong> Tableau, Excel</div>
+													<div><strong style="color: #007acc;">Skills:</strong> Interactive Dashboards, Data Visualization, Business Intelligence, KPI Monitoring</div>
+												</div>
+												<p style="font-size: 1.05em; line-height: 1.7; color: #555;">Developed a dynamic Tableau dashboard to monitor sales performance and customer behavior. Key features include real-time profit tracking, late delivery risk visualization, and filtering by date, department, and customer segment to support data-driven sales decisions.</p>
 											</div>
 										</article>
-										<article onclick="window.open('https://github.com/YULINHEEE?tab=repositories','_blank')" style="cursor:pointer; display: flex; flex-direction: column; align-items: center;">
-											<img src="images/pic01.jpg" alt="Project Image" style="width:100%;height:auto;" />
-											<div class="content" style="width:100%;">
-												<h3>Tableau Project</h3>
-												<p>Responsive website built with HTML5 and CSS3 to showcase my learning journey and technical articles.</p>
+										<article onclick="window.open('https://github.com/YULINHEEE/Supply-Chain-Data-Analysis/blob/main/supply_chain_analysis.ipynb','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 25px; border: 1px solid #ddd; border-radius: 10px; height: fit-content; gap: 30px; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+											<img src="images/Supplychain Prediction.png" alt="Project Image" style="width: 350px; height: 220px; object-fit: contain; border-radius: 8px; background-color: #f8f9fa; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+											<div class="content" style="flex: 1; padding-left: 10px;">
+												<h3 style="margin-bottom: 15px; color: #333; font-size: 1.5em;">Logistics Delay Prediction with Machine Learning</h3>
+												<div class="tools-used" style="margin-bottom: 20px; padding: 12px 16px; background-color: #f8f9fa; border-radius: 6px; border-left: 4px solid #28a745;">
+													<div style="margin-bottom: 8px;"><strong style="color: #28a745;">Tools:</strong> Python, SQL, Pandas, Scikit-learn, Jupyter</div>
+													<div><strong style="color: #28a745;">Skills:</strong> Machine Learning, Feature Engineering, Classification Modeling, Exploratory Data Analysis</div>
+												</div>
+												<p style="font-size: 1.05em; line-height: 1.7; color: #555;">Conducted an in-depth analysis of supply chain delivery delays using Python. Identified key risk factors such as product type and destination region. Engineered features from shipment data and applied both Logistic Regression and Random Forest models to predict late deliveries. Compared model performance and interpreted feature importance to support business decision-making.</p>
 											</div>
 										</article>
-										<article onclick="window.open('https://github.com/YULINHEEE?tab=repositories','_blank')" style="cursor:pointer; display: flex; flex-direction: column; align-items: center;">
-											<img src="images/pic01.jpg" alt="Project Image" style="width:100%;height:auto;" />
-											<div class="content" style="width:100%;">
-												<h3>Data Analysis Automation</h3>
-												<p>Python tools for automatic data analysis and report generation, supporting visualization and one-click export.</p>
+										<article onclick="window.open('https://github.com/YULINHEEE/NLP-text-preprocessing-and-classification/blob/Test/text_classification.ipynb','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 25px; border: 1px solid #ddd; border-radius: 10px; height: fit-content; gap: 30px; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+											<img src="images/pic15.jpg" alt="Project Image" style="width: 350px; height: 220px; object-fit: contain; border-radius: 8px; background-color: #f8f9fa; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+											<div class="content" style="flex: 1; padding-left: 10px;">
+												<h3 style="margin-bottom: 15px; color: #333; font-size: 1.5em;">Job Advertisement Classification with NLP</h3>
+												<div class="tools-used" style="margin-bottom: 20px; padding: 12px 16px; background-color: #f8f9fa; border-radius: 6px; border-left: 4px solid #6f42c1;">
+													<div style="margin-bottom: 8px;"><strong style="color: #6f42c1;">Tools:</strong> Python, NLTK, Scikit-learn, Word2Vec, Jupyter</div>
+													<div><strong style="color: #6f42c1;">Skills:</strong> Natural Language Processing, Text Processing, Word Embedding, Classification Modeling</div>
+												</div>
+												<p style="font-size: 1.05em; line-height: 1.7; color: #555;">Applied NLP techniques to classify job advertisements based on textual content. Cleaned and tokenized real-world job posting data, extracted semantic features using Word2Vec embeddings, and built classification models with Logistic Regression to predict job categories. This project demonstrates how machine learning can automate resume screening or job-matching systems by understanding unstructured text data.</p>
+											</div>
+										</article>	
+										<article onclick="window.open('https://github.com/YULINHEEE/Time-Series-Analysis-of-Solar-Power/blob/main/Daily_analysis.R','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 25px; border: 1px solid #ddd; border-radius: 10px; height: fit-content; gap: 30px; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+											<img src="images/solar_power.png" alt="Project Image" style="width: 350px; height: 220px; object-fit: contain; border-radius: 8px; background-color: #f8f9fa; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+											<div class="content" style="flex: 1; padding-left: 10px;">
+												<h3 style="margin-bottom: 15px; color: #333; font-size: 1.5em;">Time Series Analysis of Solar Power</h3>
+												<div class="tools-used" style="margin-bottom: 20px; padding: 12px 16px; background-color: #f8f9fa; border-radius: 6px; border-left: 4px solid #28a745;">
+													<div style="margin-bottom: 8px;"><strong style="color: #28a745;">Tools:</strong> R, ggplot2, dplyr</div>
+													<div><strong style="color: #28a745;">Skills:</strong> Time Series Forecasting, ARIMA/GARCH, Trend & Seasonality Analysis</div>
+												</div>
+												<p style="font-size: 1.05em; line-height: 1.7; color: #555;">Conducted time series modeling of solar power generation data to detect seasonal trends, identify anomalies, and forecast future output. Applied ARIMA and GARCH models for accurate power generation predictions under varying conditions.</p>
 											</div>
 										</article>
-										<article onclick="window.open('https://github.com/YULINHEEE?tab=repositories','_blank')" style="cursor:pointer; display: flex; flex-direction: column; align-items: center;">
-											<img src="images/pic01.jpg" alt="Project Image" style="width:100%;height:auto;" />
-											<div class="content" style="width:100%;">
-												<h3>Research Helper Tools</h3>
-												<p>Handy scripts for batch literature download, format conversion, and data cleaning.</p>
+																			
+										<article onclick="window.open('https://github.com/YULINHEEE/Bitcoin_time_series_analysis/blob/main/pipeline/Part1_stationarity_test_data_transformation.py','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 25px; border: 1px solid #ddd; border-radius: 10px; height: fit-content; gap: 30px; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+											<img src="images/pic13.jpg" alt="Project Image" style="width: 350px; height: 220px; object-fit: contain; border-radius: 8px; background-color: #f8f9fa; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+											<div class="content" style="flex: 1; padding-left: 10px;">
+												<h3 style="margin-bottom: 15px; color: #333; font-size: 1.5em;">Time Series Analysis of Bitcoin Prices</h3>
+												<div class="tools-used" style="margin-bottom: 20px; padding: 12px 16px; background-color: #f8f9fa; border-radius: 6px; border-left: 4px solid #ffc107;">
+													<div style="margin-bottom: 8px;"><strong style="color: #e68900;">Tools:</strong> Python, Pandas, Statsmodels, Matplotlib, Jupyter</div>
+													<div><strong style="color: #e68900;">Skills:</strong> ARIMA Modeling, Forecasting, Residual Diagnostics, Data Visualization</div>
+												</div>
+												<p style="font-size: 1.05em; line-height: 1.7; color: #555;">Forecasted monthly Bitcoin index prices using time series analysis. Completed log transformation, stationarity testing, ARIMA model tuning, and residual diagnostics. Generated 12-month forward predictions with confidence intervals for investment insight.</p>
+											</div>
+										</article>
+										<article onclick="window.open('https://github.com/YULINHEEE/COVID-19-Vaccination-Data-Analysis-with-SQL/blob/main/visualization/queries_and_visualization.ipynb','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 25px; border: 1px solid #ddd; border-radius: 10px; height: fit-content; gap: 30px; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+											<img src="images/pic12.jpg" alt="Project Image" style="width: 350px; height: 220px; object-fit: contain; border-radius: 8px; background-color: #f8f9fa; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+											<div class="content" style="flex: 1; padding-left: 10px;">
+												<h3 style="margin-bottom: 15px; color: #333; font-size: 1.5em;">COVID-19 Vaccination Database Design</h3>
+												<div class="tools-used" style="margin-bottom: 20px; padding: 12px 16px; background-color: #f8f9fa; border-radius: 6px; border-left: 4px solid #dc3545;">
+													<div style="margin-bottom: 8px;"><strong style="color: #dc3545;">Tools:</strong> SQL, PostgreSQL, Python, Jupyter, ERD Tools</div>
+													<div><strong style="color: #dc3545;">Skills:</strong> Relational Database Design, SQL Querying, Data Normalization</div>
+												</div>
+												<p style="font-size: 1.05em; line-height: 1.7; color: #555;">Designed a relational database using the OWID COVID-19 vaccination dataset. Built ER diagrams, normalized tables, and wrote SQL queries to analyze global vaccine rollout patterns across countries and time.</p>
 											</div>
 										</article>
 									</div>
 								</section>
 
-							<!-- About & Contact Section -->
-								<section>
-									<header class="major">
-										<h2>About Me</h2>
+							<!-- Resume Section -->
+								<section id="resume" style="display: block;">
+									<header class="major" onclick="toggleResumeContent()" style="cursor: pointer;">
+										<h2>My Resume</h2>
 									</header>
-									<p>I'm Yulin He, a developer with experience in Python, web automation, and data processing. I enjoy building tools that make work easier and more efficient. Feel free to connect with me for collaboration or technical discussions!</p>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="mailto:yulinhe1008@hotmail.com">yulinhe1008@hotmail.com</a></li>
-										<li class="icon brands fa-github"><a href="https://github.com/YULINHEEE?tab=repositories" target="_blank">github.com/YULINHEEE</a></li>
-									</ul>
-								</section>
-
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>
-
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="generic.html">Generic</a></li>
-										<li><a href="elements.html">Elements</a></li>
-									</ul>
-								</nav>
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Ante interdum</h2>
-									</header>
-									<div class="mini-posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
+									
+									<div id="resume-content">
+										<p style="text-align: center; font-size: 1.1em; margin-bottom: 30px; color: #555;">
+											Download my complete resume to learn more about my experience, education, and technical skills.
+										</p>
+										<!-- Download Resume -->
+										<div style="text-align: center;">
+											<ul class="actions">
+												<li><a href="https://1drv.ms/b/c/debe48202d2b83cd/EWOf3CxSQRxKjj23gJsU_ggBh7zCRsZZKSzhHSbslgU-5g?e=xJr4Sr" class="button primary icon solid fa-download" target="_blank">Download Full Resume (PDF)</a></li>
+											</ul>
+										</div>
 									</div>
-									<ul class="actions">
-										<li><a href="#" class="button">More</a></li>
-									</ul>
 								</section>
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Get in touch</h2>
+							<!-- Contact Section -->
+								<section id="contact">
+									<header class="major" onclick="toggleContactContent()" style="cursor: pointer;">
+										<h2>Contact Me</h2>
 									</header>
-									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-										<li class="icon solid fa-phone">(000) 000-0000</li>
-										<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
-										Nashville, TN 00000-0000</li>
+									<div id="contact-content">
+									<p>I'm always open to discussing new opportunities, collaborations, or just connecting with fellow data enthusiasts. Feel free to reach out!</p>
+									<ul class="contact" style="border: none !important;">
+										<li class="icon solid fa-envelope" style="border-bottom: none !important;"><a href="mailto:yulinhe1008@hotmail.com" style="border-bottom: none !important; text-decoration: none !important;">yulinhe1008@hotmail.com</a></li>
+										<li class="icon brands fa-github" style="border-bottom: none !important;"><a href="https://github.com/YULINHEEE?tab=repositories" target="_blank" style="border-bottom: none !important; text-decoration: none !important;">github.com/YULINHEEE</a></li>
+										<li class="icon brands fa-linkedin" style="border-bottom: none !important;"><a href="https://www.linkedin.com/in/yulinhe1008/" target="_blank" style="border-bottom: none !important; text-decoration: none !important;">linkedin.com/in/yulinhe1008</a></li>
+										<li class="icon solid fa-map-marker-alt" style="border-bottom: none !important;">Melbourne, Australia</li>
 									</ul>
+									</div>
 								</section>
-
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
 
 						</div>
 					</div>
@@ -176,6 +378,31 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+			<!-- Custom Resume Toggle Script -->
+			<script>
+				function toggleContent(contentId) {
+					const content = document.getElementById(contentId);
+					
+					if (content.style.display === 'none') {
+						content.style.display = 'block';
+					} else {
+						content.style.display = 'none';
+					}
+				}
+				
+				function toggleProjectsContent() {
+					toggleContent('projects-content');
+				}
+				
+				function toggleResumeContent() {
+					toggleContent('resume-content');
+				}
+				
+				function toggleContactContent() {
+					toggleContent('contact-content');
+				}
+			</script>
 
 	</body>
 </html>
