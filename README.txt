@@ -1,30 +1,28 @@
-Editorial by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# Yulin He — Personal Portfolio Website
 
+This is my personal website showcasing my transition from environmental consulting to data science.
 
-Say hello to Editorial, a blog/magazine-ish template built around a toggleable "locking"
-sidebar (scroll down to see what I mean) and an accordion-style menu. Not the usual landing
-page/portfolio affair you'd expect to see at HTML5 UP, but I figured for my 41st (!!!)
-template I'd change it up a little. Enjoy :)
+This website was created to showcase:
+- My data science projects and technical skills  
+- A downloadable and interactive resume    
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+🔗 **Live Site**: [https://github.com/YULINHEEE)  
 
-(* = not included)
+---
 
-AJ
-aj@lkn.io | @ajlkn
+## Website Features
 
+- **About Me**: Background and career story  
+- **Projects**: Summaries of key data and analytics projects  
+- **Resume**: Resume section embedded directly in the page  
+- **Contact**: Social and email links to get in touch  
+- **Responsive Design**: Works on desktop, tablet, and mobile
 
-Credits:
+---
 
-	Demo Images:
-		Unsplash (unsplash.com)
+## Tech Stack
 
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+- HTML5 + CSS3  
+- JavaScript (minimal custom JS)  
+- Theme: [Editorial by HTML5 UP](https://html5up.net/editorial)  
+- Deployment: GitHub Pages  
