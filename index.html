@@ -147,20 +147,9 @@
 			
 			/* Responsive grid for projects */
 			@media (max-width: 768px) {
-				.project-container article {
-					flex-direction: column !important;
-					text-align: center;
-				}
-				
-				.project-container article img {
-					width: 100% !important;
-					max-width: 400px;
-					height: auto !important;
-					margin: 0 auto 20px auto;
-				}
-				
-				.project-container article .content {
-					padding-left: 0 !important;
+				.project-container {
+					grid-template-columns: 1fr !important;
+					gap: 40px !important;
 				}
 				
 				body {
@@ -227,7 +216,6 @@
 										<ul style="display: flex; gap: 15px; margin: 0; padding: 0; list-style: none; align-items: center; white-space: nowrap; flex-shrink: 0; font-weight: 600;">
 											<li><a href="#banner" style="text-decoration: none; color: #333; font-weight: 600; padding: 8px 15px; border-radius: 4px; transition: all 0.3s ease; border-bottom: none !important; white-space: nowrap;" onmouseover="this.style.backgroundColor='#f0f0f0'" onmouseout="this.style.backgroundColor='transparent'">About Me</a></li>
 											<li><a href="#projects" style="text-decoration: none; color: #333; font-weight: 600; padding: 8px 15px; border-radius: 4px; transition: all 0.3s ease; border-bottom: none !important; white-space: nowrap;" onmouseover="this.style.backgroundColor='#f0f0f0'" onmouseout="this.style.backgroundColor='transparent'">Projects</a></li>
-											<li><a href="#resume" style="text-decoration: none; color: #333; font-weight: 600; padding: 8px 15px; border-radius: 4px; transition: all 0.3s ease; border-bottom: none !important; white-space: nowrap;" onmouseover="this.style.backgroundColor='#f0f0f0'" onmouseout="this.style.backgroundColor='transparent'">Resume</a></li>
 											<li><a href="#contact" style="text-decoration: none; color: #333; font-weight: 600; padding: 8px 15px; border-radius: 4px; transition: all 0.3s ease; border-bottom: none !important; white-space: nowrap;" onmouseover="this.style.backgroundColor='#f0f0f0'" onmouseout="this.style.backgroundColor='transparent'">Contact Me</a></li>
 										</ul>
 										<ul class="icons" style="margin: 0; display: flex; gap: 10px; align-items: center; flex-shrink: 0;">
@@ -241,15 +229,21 @@
 								</header>
 
 							<!-- Banner -->
-								<section id="banner" style="display: flex; align-items: center; gap: 30px;">
-									<div class="content" style="flex: 2;">
+								<section id="banner" style="display: flex; align-items: center; gap: 40px;">
+									<div class="content" style="flex: 3;">
 										<header>
 											<h1>Hello, I'm Yulin He</h1>
 											<p>Welcome to my project portfolio website</p>
 										</header>
-										<p>I'm a data analyst with practical experience in Python, R, SQL, Tableau, and Power BI. I specialize in turning raw data into clear insights that support business decisions.
-											<br />My projects cover sales performance tracking, supply chain analysis, time series forecasting, and text analysis with NLP.
-											<br />With a focus on data storytelling and problem-solving, I enjoy helping organizations understand patterns, improve operations, and make informed decisions through data.</p>
+										<p>
+											I am a data scientist trained at RMIT, specialising in building end-to-end machine learning systems. Through my coursework and industry project, I’ve worked across the full ML pipeline from data cleaning, feature engineering, and big-data processing, to model development, evaluation, optimisation, and deployment. 
+											<br><br>
+											I have hands-on experience with classification models, NLP tasks, and AI application development including chatbots, multi-agent workflows, and LLM integration. I enjoy training models that are not only accurate but also reliable and ready for real-world use.
+											<br><br>
+											Before data science, I worked in ecology, which strengthened my ability to work with messy data and spot patterns in complex systems. This mindset now guides how I approach machine learning problems: clear logic, careful experimentation, and a drive to keep improving in this fast-moving AI era.
+											<br><br>
+											I list my selected projects on this website, where I continue to document my learning, my work, and the ideas I’m exploring on my path as an ML practitioner.
+										</p>
 									</div>
 									<span class="image object" style="display: flex; justify-content: flex-end; flex: 1;">
 										<img src="images/pic10.jpg" alt="" style="width: 300px; height: 300px; object-fit: cover; border-radius: 50%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);" />
@@ -261,93 +255,116 @@
 									<header class="major" onclick="toggleProjectsContent()" style="cursor: pointer;">
 										<h2>My Projects</h2>
 									</header>
-									<div id="projects-content" class="project-container" style="display: flex; flex-direction: column; gap: 30px;">
-										<article onclick="window.open('https://public.tableau.com/app/profile/yulin.he/viz/SupplyChian/DashboardSales?publish=yes','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 25px; border: 1px solid #ddd; border-radius: 10px; height: fit-content; gap: 30px; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-											<img src="images/tableau.png" alt="Project Image" style="width: 350px; height: 220px; object-fit: contain; border-radius: 8px; background-color: #f8f9fa; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-											<div class="content" style="flex: 1; padding-left: 10px;">
-												<h3 style="margin-bottom: 15px; color: #333; font-size: 1.5em;">Sales KPI Dashboard with Tableau</h3>
-												<div class="tools-used" style="margin-bottom: 20px; padding: 12px 16px; background-color: #f8f9fa; border-radius: 6px; border-left: 4px solid #007acc;">
-													<div style="margin-bottom: 8px;"><strong style="color: #007acc;">Tools:</strong> Tableau, Excel</div>
-													<div><strong style="color: #007acc;">Skills:</strong> Interactive Dashboards, Data Visualization, Business Intelligence, KPI Monitoring</div>
-												</div>
-												<p style="font-size: 1.05em; line-height: 1.7; color: #555;">Developed a dynamic Tableau dashboard to monitor sales performance and customer behavior. Key features include real-time profit tracking, late delivery risk visualization, and filtering by date, department, and customer segment to support data-driven sales decisions.</p>
-											</div>
-										</article>
-										<article onclick="window.open('https://github.com/YULINHEEE/Supply-Chain-Data-Analysis/blob/main/supply_chain_analysis.ipynb','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 25px; border: 1px solid #ddd; border-radius: 10px; height: fit-content; gap: 30px; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-											<img src="images/Supplychain Prediction.png" alt="Project Image" style="width: 350px; height: 220px; object-fit: contain; border-radius: 8px; background-color: #f8f9fa; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-											<div class="content" style="flex: 1; padding-left: 10px;">
-												<h3 style="margin-bottom: 15px; color: #333; font-size: 1.5em;">Logistics Delay Prediction with Machine Learning</h3>
-												<div class="tools-used" style="margin-bottom: 20px; padding: 12px 16px; background-color: #f8f9fa; border-radius: 6px; border-left: 4px solid #28a745;">
-													<div style="margin-bottom: 8px;"><strong style="color: #28a745;">Tools:</strong> Python, SQL, Pandas, Scikit-learn, Jupyter</div>
-													<div><strong style="color: #28a745;">Skills:</strong> Machine Learning, Feature Engineering, Classification Modeling, Exploratory Data Analysis</div>
-												</div>
-												<p style="font-size: 1.05em; line-height: 1.7; color: #555;">Conducted an in-depth analysis of supply chain delivery delays using Python. Identified key risk factors such as product type and destination region. Engineered features from shipment data and applied both Logistic Regression and Random Forest models to predict late deliveries. Compared model performance and interpreted feature importance to support business decision-making.</p>
-											</div>
-										</article>
-										<article onclick="window.open('https://github.com/YULINHEEE/NLP-text-preprocessing-and-classification/blob/Test/text_classification.ipynb','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 25px; border: 1px solid #ddd; border-radius: 10px; height: fit-content; gap: 30px; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-											<img src="images/pic15.jpg" alt="Project Image" style="width: 350px; height: 220px; object-fit: contain; border-radius: 8px; background-color: #f8f9fa; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-											<div class="content" style="flex: 1; padding-left: 10px;">
-												<h3 style="margin-bottom: 15px; color: #333; font-size: 1.5em;">Job Advertisement Classification with NLP</h3>
-												<div class="tools-used" style="margin-bottom: 20px; padding: 12px 16px; background-color: #f8f9fa; border-radius: 6px; border-left: 4px solid #6f42c1;">
-													<div style="margin-bottom: 8px;"><strong style="color: #6f42c1;">Tools:</strong> Python, NLTK, Scikit-learn, Word2Vec, Jupyter</div>
-													<div><strong style="color: #6f42c1;">Skills:</strong> Natural Language Processing, Text Processing, Word Embedding, Classification Modeling</div>
-												</div>
-												<p style="font-size: 1.05em; line-height: 1.7; color: #555;">Applied NLP techniques to classify job advertisements based on textual content. Cleaned and tokenized real-world job posting data, extracted semantic features using Word2Vec embeddings, and built classification models with Logistic Regression to predict job categories. This project demonstrates how machine learning can automate resume screening or job-matching systems by understanding unstructured text data.</p>
-											</div>
-										</article>	
-										<article onclick="window.open('https://github.com/YULINHEEE/Time-Series-Analysis-of-Solar-Power/blob/main/Daily_analysis.R','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 25px; border: 1px solid #ddd; border-radius: 10px; height: fit-content; gap: 30px; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-											<img src="images/solar_power.png" alt="Project Image" style="width: 350px; height: 220px; object-fit: contain; border-radius: 8px; background-color: #f8f9fa; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-											<div class="content" style="flex: 1; padding-left: 10px;">
-												<h3 style="margin-bottom: 15px; color: #333; font-size: 1.5em;">Time Series Analysis of Solar Power</h3>
-												<div class="tools-used" style="margin-bottom: 20px; padding: 12px 16px; background-color: #f8f9fa; border-radius: 6px; border-left: 4px solid #28a745;">
-													<div style="margin-bottom: 8px;"><strong style="color: #28a745;">Tools:</strong> R, ggplot2, dplyr</div>
-													<div><strong style="color: #28a745;">Skills:</strong> Time Series Forecasting, ARIMA/GARCH, Trend & Seasonality Analysis</div>
-												</div>
-												<p style="font-size: 1.05em; line-height: 1.7; color: #555;">Conducted time series modeling of solar power generation data to detect seasonal trends, identify anomalies, and forecast future output. Applied ARIMA and GARCH models for accurate power generation predictions under varying conditions.</p>
-											</div>
-										</article>
-																			
-										<article onclick="window.open('https://github.com/YULINHEEE/Bitcoin_time_series_analysis/blob/main/pipeline/Part1_stationarity_test_data_transformation.py','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 25px; border: 1px solid #ddd; border-radius: 10px; height: fit-content; gap: 30px; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-											<img src="images/pic13.jpg" alt="Project Image" style="width: 350px; height: 220px; object-fit: contain; border-radius: 8px; background-color: #f8f9fa; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-											<div class="content" style="flex: 1; padding-left: 10px;">
-												<h3 style="margin-bottom: 15px; color: #333; font-size: 1.5em;">Time Series Analysis of Bitcoin Prices</h3>
-												<div class="tools-used" style="margin-bottom: 20px; padding: 12px 16px; background-color: #f8f9fa; border-radius: 6px; border-left: 4px solid #ffc107;">
-													<div style="margin-bottom: 8px;"><strong style="color: #e68900;">Tools:</strong> Python, Pandas, Statsmodels, Matplotlib, Jupyter</div>
-													<div><strong style="color: #e68900;">Skills:</strong> ARIMA Modeling, Forecasting, Residual Diagnostics, Data Visualization</div>
-												</div>
-												<p style="font-size: 1.05em; line-height: 1.7; color: #555;">Forecasted monthly Bitcoin index prices using time series analysis. Completed log transformation, stationarity testing, ARIMA model tuning, and residual diagnostics. Generated 12-month forward predictions with confidence intervals for investment insight.</p>
-											</div>
-										</article>
-										<article onclick="window.open('https://github.com/YULINHEEE/COVID-19-Vaccination-Data-Analysis-with-SQL/blob/main/visualization/queries_and_visualization.ipynb','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 25px; border: 1px solid #ddd; border-radius: 10px; height: fit-content; gap: 30px; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-											<img src="images/pic12.jpg" alt="Project Image" style="width: 350px; height: 220px; object-fit: contain; border-radius: 8px; background-color: #f8f9fa; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-											<div class="content" style="flex: 1; padding-left: 10px;">
-												<h3 style="margin-bottom: 15px; color: #333; font-size: 1.5em;">COVID-19 Vaccination Database Design</h3>
-												<div class="tools-used" style="margin-bottom: 20px; padding: 12px 16px; background-color: #f8f9fa; border-radius: 6px; border-left: 4px solid #dc3545;">
-													<div style="margin-bottom: 8px;"><strong style="color: #dc3545;">Tools:</strong> SQL, PostgreSQL, Python, Jupyter, ERD Tools</div>
-													<div><strong style="color: #dc3545;">Skills:</strong> Relational Database Design, SQL Querying, Data Normalization</div>
-												</div>
-												<p style="font-size: 1.05em; line-height: 1.7; color: #555;">Designed a relational database using the OWID COVID-19 vaccination dataset. Built ER diagrams, normalized tables, and wrote SQL queries to analyze global vaccine rollout patterns across countries and time.</p>
-											</div>
-										</article>
-									</div>
-								</section>
+									<div id="projects-content" class="project-container" style="display: grid; grid-template-columns: 1fr; gap: 30px;">
 
-							<!-- Resume Section -->
-								<section id="resume" style="display: block;">
-									<header class="major" onclick="toggleResumeContent()" style="cursor: pointer;">
-										<h2>My Resume</h2>
-									</header>
-									
-									<div id="resume-content">
-										<p style="text-align: center; font-size: 1.1em; margin-bottom: 30px; color: #555;">
-											Download my complete resume to learn more about my experience, education, and technical skills.
-										</p>
-										<!-- Download Resume -->
-										<div style="text-align: center;">
-											<ul class="actions">
-												<li><a href="https://1drv.ms/b/c/debe48202d2b83cd/ETFyNlkfKDNKsL4QrEXQgzEBLkrSFzFF_9R6ADXV5aVToA?e=vTmZZm">Download Full Resume (PDF)</a></li>
-											</ul>
-										</div>
+										<article onclick="window.open('https://','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 20px; border: 1px solid #ddd; border-radius: 8px; height: fit-content; gap: 25px;">
+											<img src="images/AIproject.png" alt="Project Image" style="width: 300px; height: 200px; object-fit: contain; border-radius: 6px; background-color: #f8f9fa; flex-shrink: 0;" />
+											<div class="content" style="flex: 1;">
+												<h3>AI Sales Co-Pilot Backend Development (2025)</h3>
+												<div class="tools-used" style="margin-bottom: 15px; padding: 8px 12px; background-color: #f8f9fa; border-radius: 5px; border-left: 4px solid #6f42c1;">
+													<div style="margin-bottom: 5px;"><strong style="color: #6f42c1;">Tools:</strong> n8n, Supabase (PostgreSQL), Salesforce SOQL, Pinecone, Azure OpenAI, ElevenLabs </div>
+													<div><strong style="color: #6f42c1;">Skills:</strong> Multi-agent workflow design, RAG pipeline, SQL & CRM integration, LLM orchestration, API engineering, system deployment</div>
+												</div>
+												<p>
+													Worked as the lead developer in an industry AI project to build the backend for an AI Sales Co-Pilot used by a major pharmaceutical company. Designed and implemented a multi-agent workflow capable of routing queries across SQL, Salesforce, RAG retrieval, and summarisation agents. Built the system using n8n, integrating Supabase (PostgreSQL + RLS), Salesforce SOQL, Pinecone vector search, and LLM-based reasoning. Delivered a fully functional backend with secure authentication, automated data retrieval, grounding via embeddings, and real-time voice interaction through ElevenLabs.
+												</p>
+											</div>
+										</article>
+
+										<article onclick="window.open('https://github.com/YULINHEEE/NLP-text-preprocessing-and-classification/blob/Test/text_classification.ipynb','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 20px; border: 1px solid #ddd; border-radius: 8px; height: fit-content; gap: 25px;">
+											<img src="images/pic15.jpg" alt="Project Image" style="width: 300px; height: 200px; object-fit: contain; border-radius: 6px; background-color: #f8f9fa; flex-shrink: 0;" />
+											<div class="content" style="flex: 1;">
+												<h3>NLP Job Advertisement Classification & Search Web Application (2024)</h3>
+												<div class="tools-used" style="margin-bottom: 15px; padding: 8px 12px; background-color: #f8f9fa; border-radius: 5px; border-left: 4px solid #6f42c1;">
+													<div style="margin-bottom: 5px;"><strong style="color: #6f42c1;">Tools:</strong> Python, Jupyter, Flask, NLTK, Scikit-learn, Word2Vec </div>
+													<div><strong style="color: #6f42c1;">Skills:</strong> text preprocessing pipeline, logistic regression classifier, feature engineering</div>
+												</div>
+												<p>
+													Built an NLP system to automate job-ad categorisation. Processed 776 job ads with regex tokenisation, lemmatisation, stopword filtering, and DF/TF pruning. Engineered CountVectorizer, TF-IDF, and Word2Vec features and trained a logistic regression model achieving 84–86% accuracy with 5-fold cross-validation. Delivered the final classifier in a Flask web app with semantic keyword search and a category recommendation tool for employers.
+												</p>
+											</div>
+										</article>
+
+										<article onclick="window.open('https:','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 20px; border: 1px solid #ddd; border-radius: 8px; height: fit-content; gap: 25px;">
+											<img src="images/coloncancerML.png" alt="Project Image" style="width: 300px; height: 200px; object-fit: contain; border-radius: 6px; background-color: #f8f9fa; flex-shrink: 0;" />
+											<div class="content" style="flex: 1;">
+												<h3>Colon Cancer Histopathology Image Classification (2025)</h3>
+												<div class="tools-used" style="margin-bottom: 15px; padding: 8px 12px; background-color: #f8f9fa; border-radius: 5px; border-left: 4px solid #6f42c1;">
+													<div style="margin-bottom: 5px;"><strong style="color: #6f42c1;">Tools:</strong> Python, TensorFlow/Keras, NumPy, Matplotlib </div>
+													<div><strong style="color: #6f42c1;">Skills:</strong> CNN modelling, small-data training, data leakage prevention, augmentation & class balancing, model evaluation & optimisation</div>
+												</div>
+												<p>
+													Developed binary and multiclass CNN models using histology images from 99 patients, ensuring patient-level split to avoid data leakage. Addressed class imbalance with augmentation, class weighting, and oversampling. Improved binary CNN performance F1 from 0.093 to 0.424 and recall from 0.052 to 0.376 through regularisation, deeper architectures, and hyperparameter tuning. Built a stable multiclass classifier under small-data settings and evaluated models using F1, recall, AUC, confusion matrices, and learning curves.
+											</div>
+										</article>
+
+										<article onclick="window.open('https://github.com/YULINHEEE/Supply-Chain-Data-Analysis/blob/main/supply_chain_analysis.ipynb','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 20px; border: 1px solid #ddd; border-radius: 8px; height: fit-content; gap: 25px;">
+											<img src="images/Supplychain Prediction.png" alt="Project Image" style="width: 300px; height: 200px; object-fit: contain; border-radius: 6px; background-color: #f8f9fa; flex-shrink: 0;" />
+											<div class="content" style="flex: 1;">
+												<h3>Supply Chain Delivery Delay Prediction (2024)</h3>
+												<div class="tools-used" style="margin-bottom: 15px; padding: 8px 12px; background-color: #f8f9fa; border-radius: 5px; border-left: 4px solid #28a745;">
+													<div style="margin-bottom: 5px;"><strong style="color: #28a745;">Tools:</strong> Python, Pandas, NumPy, Scikit-learn, Matplotlib</div>
+													<div><strong style="color: #28a745;">Skills:</strong> feature engineering, route risk modelling, classification, statistical testing, model evaluation</div>
+												</div>
+												<p>
+													Built a classification model to predict delivery delay risk across shipping routes. Cleaned and encoded supply chain order data, engineered route-level features such as Route Delay Rate and Shipping Mode, and analysed feature significance with Cramér’s V. Trained Logistic Regression and Random Forest models, with Random Forest achieving better AUC and recall. Key predictors included Shipping Mode, Route Delay Rate, and Customer Segment, supported by route-level visualisation to highlight high-risk paths.
+											</div>
+										</article>
+
+										<article onclick="window.open('https:','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 20px; border: 1px solid #ddd; border-radius: 8px; height: fit-content; gap: 25px;">
+											<img src="images/taxGenie.png" alt="Project Image" style="width: 300px; height: 200px; object-fit: contain; border-radius: 6px; background-color: #f8f9fa; flex-shrink: 0;" />
+											<div class="content" style="flex: 1;">
+												<h3>TaxGenie: AI Tax Assistant for International Students (2024)</h3>
+												<div class="tools-used" style="margin-bottom: 15px; padding: 8px 12px; background-color: #f8f9fa; border-radius: 5px; border-left: 4px solid #28a745;">
+													<div style="margin-bottom: 5px;"><strong style="color: #28a745;">Tools:</strong> Python, Sentence Transformers, LLaMA, FAISS vector store, RAG pipeline, Flask</div>
+													<div><strong style="color: #28a745;">Skills:</strong> web scraping, data cleaning, document chunking, embeddings, RAG, LLM integration, prompt design, accuracy validation</div>
+												</div>
+												<p>
+													TaxGenie is an AI-powered assistant designed to help international students navigate Australian tax filing. Our team collected verified information from the ATO and Australian Government websites, covering residency rules, income types, deductions, and visa-related tax requirements. These documents were chunked, embedded using Sentence Transformers, and stored as vectors for retrieval. When a user asks a question, TaxGenie retrieves the most relevant sources and generates an answer using LLaMA 3.1 70B, ensuring transparency by returning the exact source URL. This project demonstrates end-to-end AI application development, including data sourcing, RAG pipeline design, embedding models, LLM integration, and accuracy assurance through grounded responses.
+											</div>
+										</article>
+										
+										<article onclick="window.open('https://github.com/YULINHEEE/COVID-19-Vaccination-Data-Analysis-with-SQL/blob/main/visualization/queries_and_visualization.ipynb','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 20px; border: 1px solid #ddd; border-radius: 8px; height: fit-content; gap: 25px;">
+											<img src="images/COVID.png" alt="Project Image" style="width: 300px; height: 200px; object-fit: contain; border-radius: 6px; background-color: #f8f9fa; flex-shrink: 0;" />
+											<div class="content" style="flex: 1;">
+												<h3>COVID-19 Vaccination SQL Database Project (2024)</h3>
+												<div class="tools-used" style="margin-bottom: 15px; padding: 8px 12px; background-color: #f8f9fa; border-radius: 5px; border-left: 4px solid #dc3545;">
+													<div style="margin-bottom: 5px;"><strong style="color: #dc3545;">Tools:</strong> SQL scripts, Lucidchart (ERD design)</div>
+													<div><strong style="color: #dc3545;">Skills:</strong> relational schema design, normalization, data loading, query optimization, analytical SQL</div>
+												</div>
+												<p>
+													Designed and built a relational database using the OWID vaccination dataset. The project includes ER-modeling, database normalization, and data ingestion through custom SQL scripts. Developed a series of analytical queries to explore global vaccination trends, country-level comparisons, and time-series insights.
+												</p>
+											</div>
+										</article>
+										<article onclick="window.open('https://github.com/YULINHEEE/Bitcoin_time_series_analysis/blob/main/pipeline/Part1_stationarity_test_data_transformation.py','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 20px; border: 1px solid #ddd; border-radius: 8px; height: fit-content; gap: 25px;">
+											<img src="images/BitcoinForecast.png" alt="Project Image" style="width: 300px; height: 200px; object-fit: contain; border-radius: 6px; background-color: #f8f9fa; flex-shrink: 0;" />
+											<div class="content" style="flex: 1;">
+												<h3>Bitcoin Time Series Forecasting (2025) </h3>
+												<div class="tools-used" style="margin-bottom: 15px; padding: 8px 12px; background-color: #f8f9fa; border-radius: 5px; border-left: 4px solid #ffc107;">
+													<div style="margin-bottom: 5px;"><strong style="color: #e68900;">Tools:</strong> Python, Pandas, Statsmodels, Matplotlib, Jupyter, R</div>
+													<div><strong style="color: #e68900;">Skills:</strong> Time series analysis, ARIMA modelling, statistical forecasting, data visualisation</div>
+												</div>
+												<p>
+													A time series analysis project using monthly Bitcoin index data. The workflow includes log transformation, stationarity testing, ARIMA model selection, residual diagnostics, and generating a 12-month forecast with confidence intervals.
+												</p>
+											</div>
+										</article>
+
+										<article onclick="window.open('https://public.tableau.com/app/profile/yulin.he/viz/SupplyChian/DashboardSales?publish=yes','_blank')" style="cursor:pointer; display: flex; flex-direction: row; align-items: flex-start; padding: 20px; border: 1px solid #ddd; border-radius: 8px; height: fit-content; gap: 25px;">
+											<img src="images/tableau.png" alt="Project Image" style="width: 300px; height: 200px; object-fit: contain; border-radius: 6px; background-color: #f8f9fa; flex-shrink: 0;" />
+											<div class="content" style="flex: 1;">
+												<h3>Sales Performance & Customer Behaviour Tableau Dashboard (2025)</h3>
+												<div class="tools-used" style="margin-bottom: 15px; padding: 8px 12px; background-color: #f8f9fa; border-radius: 5px; border-left: 4px solid #007acc;">
+													<div style="margin-bottom: 5px;"><strong style="color: #007acc;">Tools:</strong> Tableau, Excel/CSV</div>
+													<div><strong style="color: #007acc;">Skills:</strong> dashboard design, interactive filters, KPI visualisation</div>
+												</div>
+												<p>
+													Built an interactive Tableau dashboard to monitor sales performance and customer behaviour. The dashboard includes profit tracking, late-delivery analysis, and route-level performance insights. Users can dynamically filter results by date, department, product category, and customer segment to uncover trends and identify operational risks. This project demonstrates strong skills in data modelling, visual design, and building business-ready Tableau dashboards.
+												</p>
+											</div>
+										</article>
+										
 									</div>
 								</section>
 
@@ -362,7 +379,7 @@
 										<li class="icon solid fa-envelope" style="border-bottom: none !important;"><a href="mailto:yulinhe1008@hotmail.com" style="border-bottom: none !important; text-decoration: none !important;">yulinhe1008@hotmail.com</a></li>
 										<li class="icon brands fa-github" style="border-bottom: none !important;"><a href="https://github.com/YULINHEEE?tab=repositories" target="_blank" style="border-bottom: none !important; text-decoration: none !important;">github.com/YULINHEEE</a></li>
 										<li class="icon brands fa-linkedin" style="border-bottom: none !important;"><a href="https://www.linkedin.com/in/yulinhe1008/" target="_blank" style="border-bottom: none !important; text-decoration: none !important;">linkedin.com/in/yulinhe1008</a></li>
-										<li class="icon solid fa-map-marker-alt" style="border-bottom: none !important;">Melbourne, Australia</li>
+										<li class="icon solid fa-map-marker-alt" style="border-bottom: none !important;">Pennant Hills, NSW, Australia, 2120</li>
 									</ul>
 									</div>
 								</section>
@@ -378,34 +395,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			
-			<!-- Custom Resume Toggle Script -->
-			<script>
-				function toggleContent(contentId) {
-					const content = document.getElementById(contentId);
-					
-					if (content.style.display === 'none') {
-						content.style.display = 'block';
-					} else {
-						content.style.display = 'none';
-					}
-				}
-				
-				function toggleProjectsContent() {
-					toggleContent('projects-content');
-				}
-				
-				function toggleResumeContent() {
-					toggleContent('resume-content');
-				}
-				
-				function toggleContactContent() {
-					toggleContent('contact-content');
-				}
-			</script>
 
 	</body>
-
 </html>
-
-
